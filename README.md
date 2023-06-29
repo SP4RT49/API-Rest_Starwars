@@ -1,29 +1,60 @@
-# MDS-APIODM-M1-2223
+# Star Wars REST API
 
-Réalisation d'un API sur Star Wars
-- Respect du modèle de Richardson
-- Respect des 5 règles du REST
-- Techs : node / express / mongo (mongoose obligatoire)
+Cette API REST fournit des informations sur l'univers Star Wars, telles que les films, les personnages, les planètes, les espèces, les vaisseaux spatiaux, les transports et les véhicules.
 
-travail en solo
+## Prérequis
+
+Avant de pouvoir exécuter l'API, assurez-vous d'avoir installé les éléments suivants sur votre machine :
+
+- Node.js (version 14 ou supérieure)
+- MongoDB (ou utilisez un service de base de données MongoDB distant)
+
+## Installation
+
+1. Clonez ce dépôt de code sur votre machine
+2. Accédez au répertoire du projet
+3. Installez les dépendances : npm i
 
 
-## Objectif : 
+## Configuration
 
-- réintégrer l'ensemble des données dans Mongo, puis proposer des routes pour les redistribuer.
-- Documenter votre API avec SWAGGER
+Avant de lancer le serveur, vous devez configurer l'accès à la base de données MongoDB. Ouvrez le fichier `config.js` et modifiez la valeur de `DB_URL` avec l'URL de votre base de données MongoDB.
+
+## Lancement du serveur
+
+Pour démarrer le serveur : npm run start
 
 
-## Liens utiles
+Le serveur démarrera et sera accessible à l'adresse `http://localhost:3000`.
 
-- L'api : https://swapi.dev/
-- Richardson : https://guide-api-rest.marmicode.fr/api-rest/le-modele-de-maturite-de-richardson (SWAPI intègre déjà le modèle de richardson !)
-- https://editor.swagger.io/
+## Points d'accès
 
-## Dates cours : 
-- 26/10 jour entier
-- 18/01 matin
-- 20/03 aprem
-- 26/05 matin
-- 05/06 aprem
-- 29/06 jour entier
+L'API expose les points d'accès suivants :
+
+- `GET /films` : Obtenez la liste des films Star Wars.
+- `GET /people` : Obtenez la liste des personnages Star Wars.
+- `GET /planets` : Obtenez la liste des planètes Star Wars.
+- `GET /species` : Obtenez la liste des espèces Star Wars.
+- `GET /starships` : Obtenez la liste des vaisseaux spatiaux Star Wars.
+- `GET /transports` : Obtenez la liste des transports Star Wars.
+- `GET /vehicles` : Obtenez la liste des véhicules Star Wars.
+
+Pour plus de détails sur les paramètres et les réponses de chaque point d'accès, veuillez consulter la documentation de l'API.
+
+## Architecture de l'API
+
+L'API suit une architecture RESTful et respecte les principes de Richardson, qui sont les suivants :
+
+- Ressources identifiées par des URI : Chaque entité de l'API est identifiée par une URI unique.
+- Utilisation des méthodes HTTP : Les opérations CRUD sont associées aux méthodes HTTP appropriées (GET, POST, PUT, DELETE).
+- Échange de représentations : Les données sont échangées entre le client et le serveur sous forme de représentations, telles que JSON.
+- Hypermédia : Les réponses de l'API peuvent contenir des liens hypertexte pour naviguer entre les ressources.
+
+---
+
+
+
+
+
+
+
